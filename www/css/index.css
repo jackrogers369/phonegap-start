@@ -25,15 +25,15 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#ff0000;
-    background-image:linear-gradient(top, #A7A7A7 0%, #ff0000 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #ff0000 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #ff0000 51%);
+    background-image:linear-gradient(top, #A7A7A7 0%, #cf1b1b 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #a12222 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #591e1e 51%);
     background-image:-webkit-gradient(
         linear,
         left top,
         left bottom,
         color-stop(0, #A7A7A7),
-        color-stop(0.51, #ff0000)
+        color-stop(0.51, #591e1e)
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
