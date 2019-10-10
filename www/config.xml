@@ -6,7 +6,7 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Jacks game</name>
+    <name>Jacks Game</name>
 
     <description>
         Jacks IPhone basic game development.
