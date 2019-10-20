@@ -47,3 +47,22 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+var key = "pen"
+var value ="blue"
+
+window.localstorage.setItem( key, value);
+
+var key = “pen”;
+var value = window.localStorage.getItem(key);
+
+
+<h2>JavaScript Alert</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+
