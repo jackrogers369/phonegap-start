@@ -48,14 +48,6 @@ var app = {
     }
 };
 
-var key = "pen"
-var value ="blue"
-
-window.localstorage.setItem( key, value);
-
-var key = “pen”;
-var value = window.localStorage.getItem(key);
-
 
 
 
