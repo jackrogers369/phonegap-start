@@ -131,5 +131,8 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+	<h2>JavaScript Alert</h2>
+
+<button onclick="myFunction()">Try it</button>
 
 </widget>
