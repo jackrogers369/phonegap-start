@@ -19,12 +19,5 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
-div {
-	 text-align: left;
-	 font-size: 50px;
-	 color: #0000b0;
-}
 
-footer{
-	position:fixed;
-}
+
