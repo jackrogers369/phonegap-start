@@ -23,23 +23,25 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 </head>
 <body>
 
 <div data-role="page" id="pageone">
-  <div data-role="header">
+  <div data-role="header" data-theme="b">
     <h1>JDR</h1>
+	<a href="#pagetwo">Go to Page Two</a>
   </div>
 
   <div data-role="main" class="ui-content">
     <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
-    <a href="#pagetwo">Go to Page Two</a>
+    
   </div>
 
-  <div data-role="footer">
+  <div data-role="footer" data-theme="b" data-position="fixed">
     <h1>Footer Text</h1>
   </div>
 </div> 
@@ -47,15 +49,16 @@
 
 
 <div data-role="page" id="pagetwo">
-  <div data-role="header">
-    <h1>Home</h1>
+  <div data-role="header" data-theme="b" >
+    <h1>Map</h1>
+	<a href="#pagethree">Go to Page three</a>
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
-    <a href="#pagethree">Go to Page three</a>
+    <p>This is the maps page, where you can click on cities to give a list of clubs </p>
+    
   </div>
-  <div data-role="footer">
+  <div data-role="footer"data-theme="b" data-position="fixed">
     <h1>Footer Text</h1>
   </div>
 </div> 
@@ -63,16 +66,17 @@
 
   
   <div data-role="page" id="pagethree">
-  <div data-role="header">
+  <div data-role="header" data-theme="b" >
     <h1>Page 3 </h1>
+	<a href="#pageone">Go to Page One</a>
   </div>
   
   <div data-role="main" class="ui-content">
     <p>This is Page three. If you click on the link below, it will take you to Page One.</p>
-    <a href="#pageone">Go to Page One</a>
+    
   </div>
 
-  <div data-role="footer">
+  <div data-role="footer" data-theme="b" data-position="fixed">
     <h1>Footer Text</h1>
   </div>
   
