@@ -47,7 +47,8 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
+*/
+/*
 function myMap() {
 var mapProp= {
   center:new google.maps.LatLng(51.508742,-0.120850),
@@ -56,6 +57,9 @@ var mapProp= {
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 */
+
+
+
 //when the jQuery Mobile page is initialised
 $(document).on('pageinit', function() {
 	
