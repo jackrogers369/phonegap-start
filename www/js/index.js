@@ -15,7 +15,7 @@
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
- 
+ */
 var app = {
     // Application Constructor
     initialize: function() {
@@ -47,70 +47,72 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-*/
-/*
-function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-*/
+var watchID;
+var accelerometerOptions = { frequency: 2000 };  // Update every 2 seconds
+accelerometerOptions.frequency = 3000; //changed my mind - now 3 seconds
 
 
-
-//when the jQuery Mobile page is initialised
-$(document).on('pageinit', function() {
+//when the page is created...
+$(document).on("pagecreate", "#page1", function () {
 	
-	//set up listener for button click
-	$(document).on('click', getPosition);
+	//setup listener for the toggle switch
+	$("#flipswitch").on("change", function() {
+		
+		if( $(this).val() == "on" ) startSensor();
+		else if ( $(this).val() == "off" ) stopSensor();
+
+	});
 	
-	//change time box to show message
-	$('#time').val("Press the button to get location data");
+	//setup listener for the slider
+	$("#slider").on("slidestop", function() {
+		
+		
+		//the value from the slider is text - it needs to be turned into an integer
+		var freq = parseInt($(this).val());
+		
+		updateFreq(freq);
+	
+	});
 	
 });
 
 
-//Call this function when you want to get the current position
-function getPosition() {
-	
-	//change time box to show updated message
-	$('#time').val("Getting data...");
-	
-	//instruct location service to get position with appropriate callbacks
-	navigator.geolocation.getCurrentPosition(successPosition, failPosition);
+function startSensor() {
+	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError, accelerometerOptions);
 }
 
 
-//called when the position is successfully determined
-function successPosition(position) {
-	
-	//You can find out more details about what the position obejct contains here:
-	// http://www.w3schools.com/html/html5_geolocation.asp
-	
-
-	//lets get some stuff out of the position object
-	var time = position.timestamp;
-	var latitude = position.coords.latitude;
-	var longitude = position.coords.longitude
-	
-	//OK. Now we want to update the display with the correct values
-	$('#time').val("Recieved data at " + time);
-	$('#lattext').val("lat="+ latitude);
-	$('#longtext').val("long="+ longitude);
-	
-	
+function stopSensor() {
+	navigator.accelerometer.clearWatch(watchID);
+			
+	$('#sensorX').val("");
+	$('#sensorY').val("");
+	$('#sensorZ').val("");
+	$('#timestamp').val("");
 }
 
-//called if the position is not obtained correctly
-function failPosition(error) {
-	//change time box to show updated message
-	$('#time').val("Error getting data: " + error);
+function accelerometerSuccess(acceleration) {
 	
+	$('#sensorX').val(acceleration.x);
+	$('#sensorY').val(acceleration.y);
+	$('#sensorZ').val(acceleration.z);
+	$('#timestamp').val(acceleration.timestamp);
+
+}
+
+function accelerometerError() {
+   alert('Error');
+}
+
+function updateFreq(freq) {
+	//do something to update freq. here.
 }
 
 
-  
+
+
+
+
+
 
 
