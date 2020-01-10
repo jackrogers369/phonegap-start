@@ -81,4 +81,10 @@ li a.active {
 .placeholder input {
 	color:#ffffff;
 }
+.p {
+	font-size:10;
+}
+.checked {
+  color: orange;
+}
 
