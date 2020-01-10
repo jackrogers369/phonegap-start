@@ -60,7 +60,7 @@ li a.active {
 .search-container input {
   float: center;
   padding:5px;
-  width: 100%;
+  width: 99%;
   height:20px;
   background-color:#074AB2;
   font-size: 20px;
