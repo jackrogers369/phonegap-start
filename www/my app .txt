@@ -1,0 +1,157 @@
+
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="index.js"></script>
+
+</head>
+<body>
+<!-- this is page one-->
+
+<div data-role="page" id="pageone">
+  <div data-role="header" data-theme="b">
+    <h1>JDR</h1>
+	<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search by Artist, City or Venue" name="search">
+  
+</form>
+	<a href="#pagetwo">maps</a>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
+    
+  </div>
+
+  <div data-role="footer" data-theme="b" data-position="fixed">
+    <h1>JDR</h1>
+	<h2> 
+	<img src = "facebook.jpg"  style = "width:20px ; height20px; float: left" />
+	<img src = "twitter.png"  style = "width:20px ; height20px; float: left"/>
+	
+	</h2>
+  </div>
+</div> 
+
+
+<!-- this is page two -->
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header" data-theme="b" >
+    <h1>Map</h1>
+	 <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search by Artist, City or Venue" name="search">
+  
+</form>
+	<a href="#pagethree">Arists</a>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>This is the maps page, where you can click on cities to give a list of clubs </p>
+        
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiuFUk8nMOO_OfEBvD0B2utGokLvvdf54&callback=myMap"></script>
+  </div>
+
+  
+  <div data-role="footer"data-theme="b" data-position="fixed">
+    <h1>JDR</h1>
+	<h2> 
+	<img src = "facebook.jpg"  style = "width:20px ; height20px; float: left" />
+	<img src = "twitter.png"  style = "width:20px ; height20px; float: left"/>
+	
+	</h2>
+  </div>
+</div> 
+
+
+<!--this is page three-->
+
+<div data-role="page" id="pagethree">
+  <div data-role="header" data-theme="b" >
+    <h1>Artists</h1>
+	<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search by Artist, City or Venue" name="search">
+  
+</form>
+	<a href="#pagefour">Artists</a>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>This is the maps page, where you can click on cities to give a list of clubs </p>
+    
+  </div>
+  <div data-role="footer"data-theme="b" data-position="fixed">
+    <h1>JDR</h1>
+	<h2> 
+	<img src = "facebook.jpg"  style = "width:20px ; height20px; float: left" />
+	<img src = "twitter.png"  style = "width:20px ; height20px; float: left"/>
+	
+	</h2>
+  </div>
+</div> 
+
+
+<!-- this is page four-->
+  
+  <div data-role="page" id="pagefour">
+  <div data-role="header" data-theme="b" >
+    <h1>Venue</h1>
+	<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search by Artist, City or Venue" name="search">
+  
+</form>
+	<a href="#pageone">Venue</a>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+    <p>This is Page three. If you click on the link below, it will take you to Page One.</p>
+    
+  </div>
+
+  <div data-role="footer" data-theme="b" data-position="fixed">
+    <h1>JDR</h1>
+	<h2> 
+	<img src = "facebook.jpg"  style = "width:20px ; height20px; float: left" />
+	<img src = "twitter.png"  style = "width:20px ; height20px; float: left"/>
+	
+	</h2>
+  </div>
+  
+</div> 
+
