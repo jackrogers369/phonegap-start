@@ -1,9 +1,10 @@
 
 
 .header {
-  padding: 10px 16px;
+  padding: 10px 10px;
   background: #074AB2;
   color:#ffffff;
+  height: 80px;
 
 }
 
@@ -57,6 +58,11 @@ li a.active {
   background-color: #074AB2;
 }
 
+.search-container {
+  position: relative;
+  top: -15px;
+}
+
 .search-container input {
   float: center;
   padding:5px;
@@ -68,6 +74,7 @@ li a.active {
   border-style: solid;
   border-color: white;
   padding-right:5px;
+  
 
 }
 
