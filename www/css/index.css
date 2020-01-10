@@ -16,13 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
+
 .header {
   padding: 10px 16px;
   background: #2C99FF;
-  color:#ffffff ;
+  color:#ffffff;
 }
 
 /* Page content */
