@@ -1,7 +1,7 @@
 
 .header {
   padding: 10px 10px;
-  background: #074AB2;
+  background: #919191;
   color:#ffffff;
   height: 80px;
   position: relative;
@@ -73,7 +73,7 @@ li a.active {
   padding:5px;
   width: 99%;
   height:20px;
-  background-color:#074AB2;
+  background-color:#919191;
   font-size: 10px;
   border-width: 1px;
   border-style: solid;
@@ -199,4 +199,53 @@ img {
 .img {
 	width: 100%;
 	height:200px;
+}
+
+
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding:10px;
+  position:relative;
+  top: -5px;
+  
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  padding:10px;
+  position:relative;
+  top: -5px;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+  padding:10px;
+  position:relative;
+  top: -5px;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+  padding:10px;
+  position:relative;
+  top: -5px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #919191;
+  color: white;
+  position:relative;
+  top: 2px;
 }
