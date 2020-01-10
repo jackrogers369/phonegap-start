@@ -1,10 +1,11 @@
 
-
 .header {
   padding: 10px 10px;
   background: #074AB2;
   color:#ffffff;
   height: 80px;
+  position: relative;
+  top: -35px;
 
 }
 
@@ -31,8 +32,12 @@ ul {
   overflow: hidden;
   border: 1px solid #e9e9e9;
   background-color: #e9e9e9;
-  font-size:10px;
+  font-size:15px;
   color: black;
+  width:100%;
+  position: relative;
+  top:-40px;
+ 
   ;
 }
 
@@ -81,9 +86,7 @@ li a.active {
 .placeholder input {
 	color:#ffffff;
 }
-.p {
-	font-size:10;
-}
+
 .checked {
   color: orange;
 }
