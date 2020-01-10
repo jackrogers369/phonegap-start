@@ -19,5 +19,65 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
+.header {
+  padding: 10px 16px;
+  background: #2C99FF;
+  color:#ffffff ;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #2C99FF;
+  background-color: #2C99FF;
+  font-size:20px;
+  color: #ffffff;
+  ;
+}
+
+li {
+  float:left;
+  
+}
+
+li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #00048D;
+}
+
+li a.active {
+  color: white;
+  background-color: #2C99FF;
+}
+
+.search-container {
+  float: right;
+  size
+}
 
 
