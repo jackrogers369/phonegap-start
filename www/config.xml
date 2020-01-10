@@ -6,10 +6,10 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Jacks Game</name>
+    <name>Jacks application</name>
 
     <description>
-        Jacks IPhone basic game.
+        JDR app
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
