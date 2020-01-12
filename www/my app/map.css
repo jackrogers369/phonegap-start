@@ -36,7 +36,7 @@ ul {
   color: black;
   width:100%;
   position: relative;
-  top:-45px;
+  top:-40px;
  
   ;
 }
@@ -86,70 +86,4 @@ li a.active {
   padding-right:5px;
   
 
-}
-
-.placeholder input {
-	color:#ffffff;
-}
-
-.checked {
-  color: orange;
-}
-
-
-body {
-	background-color:#e9e9e9;
-	height: 100%;
-	width: 100%;
-}
-
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #919191;
-  color: white;
-  position:relative;
-  top: 2px;
-
-}
-
-h3 {
-	color:white;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-  padding:10px;
-  position:relative;
-  top: -5px;
-  
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-  padding:10px;
-  position:relative;
-  top: -5px;
-}
-
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-  padding:10px;
-  position:relative;
-  top: -5px;
-}
-
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
-  padding:10px;
-  position:relative;
-  top: -5px;
 }
