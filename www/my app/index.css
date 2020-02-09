@@ -255,6 +255,7 @@ margin: 8px 0;
 border: none;
 cursor: pointer;
 width: 100%;
+border-radius: 8px;
 
 }
 
@@ -269,6 +270,7 @@ margin: 8px 0;
 border: none;
 cursor: pointer;
 width: 50%;
+border-radius: 8px;
 
 }
 
@@ -277,6 +279,7 @@ width: auto;
 padding: 10px 18px;
 background-color: #f44336;
 color: white;
+border-radius: 8px;
 
 }
 
@@ -298,13 +301,14 @@ position: relative;
 }
 
 img.avatar {
-width: 40%;
+width: 50%;
+height: 125px;
 border-radius: 50%;
 
 }
 
 .container {
-padding: 16px;
+padding: 15px;
 
 }
 
