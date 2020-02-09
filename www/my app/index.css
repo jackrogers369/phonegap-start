@@ -259,9 +259,9 @@ width: 100%;
 }
 
 #test {
- position: fixed;
-top:0px;
-right:2px;
+ position: absolute;
+top:5px;
+right:5px;
 background-color:#074AB2;
 color: white;
 padding: 14px 20px;

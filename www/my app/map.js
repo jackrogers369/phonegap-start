@@ -1,78 +1,34 @@
-
-function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(52.18935, -2.22001),
-  zoom:15,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-/*
-var marker = new google.maps.Marker({position: myCenter});
-
-marker.setMap(map);
-
-
-
-
-
-
-var input = googleMap(
-      document.getElementById('pac-input'));
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-  var searchBox = new google.maps.places.SearchBox(
-    googleMap(input));
-
-  // [START region_getplaces]
-  // Listen for the event fired when the user selects an item from the
-  // pick list. Retrieve the matching places for that item.
-  google.maps.event.addListener(searchBox, 'places_changed', function() {
-    var places = searchBox.getPlaces();
-
-    if (places.length == 0) {
-      return;
-    }
-    for (var i = 0, marker; marker = markers[i]; i++) {
-      marker.setMap(null);
-    }
-
-    // For each place, get the icon, place name, and location.
-    markers = [];
-    var bounds = new google.maps.LatLngBounds();
-    for (var i = 0, place; place = places[i]; i++) {
-      var image = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-      };
-
-      // Create a marker for each place.
-      var marker = new google.maps.Marker({
-        map: map,
-        icon: image,
-        title: place.name,
-        position: place.geometry.location
-      });
-
-      markers.push(marker);
-
-      bounds.extend(place.geometry.location);
-    }
-
-    map.fitBounds(bounds);
+/*function myMap() {
+  var uluru = {lat: 52.194589, lng: -2.221570}; 
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: uluru
   });
-  // [END region_getplaces]
 
-  // Bias the SearchBox results towards places that are within the bounds of the
-  // current map's viewport.
-  google.maps.event.addListener(map, 'bounds_changed', function() {
-    var bounds = map.getBounds();
-    searchBox.setBounds(bounds);
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">HANBAO</h1>'+ '<h2> Star rating </h2> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>'+
+      '<div id="bodyContent">'+
+      '<p><b>Hanbao</b>, the burger restaurant<br></br>' +
+      'Small, fast-food eatery offering a range of eastern & western style burgers plus craft cocktails.<br></br>'+
+      '<b> Atmosphere </b> <br></br>'+
+      'Casual and cosy <br></br> '+
+      '<b>Amenities</b><br></br>'+
+      'Bar onsite, good for kids, high chairs, toilets'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
   });
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-*/
