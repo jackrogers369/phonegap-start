@@ -128,3 +128,16 @@ body {
         font-size: 13px;
         font-weight: 300;
       }
+	  
+	 	  
+ button {
+background-color:#074AB2;
+color: white;
+padding: 6px 6px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 10%;
+border-radius: 6px;
+
+}

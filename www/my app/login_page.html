@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="index.css">
+<?php
+
+include('index.html');
+require('connect.php');
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$username = $_POST['uname'];
+
+$name = mysqli_real_escape_string($conn,$name);
+$email = mysqli_real_escape_string($conn,$email);
+$username = mysqli_real_escape_string($conn,$username);
+
+$sql="
+insert into customerdetails(Name, Email, Username) values ('$name', '$email', '$username');";
+
+
+$result = mysqli_query($conn,$sql);
+?>
+<header>
+<div class="header" id="myHeader"> 
+<h3> JDR </h3>
+</header>
+</div>
+ <body>
+<br>
+<ul>
+	<li><a class="active" href="index.html">Home</a></li>
+	<li><a href="restaurantoffers.html">Restuarant Offers</a></li>
+	<li><a href="foodtype">Food Type</a></li>
+	<li><a href="map.html">Map</a></li>
+</ul>

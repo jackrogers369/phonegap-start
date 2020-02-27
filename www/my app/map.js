@@ -1,3 +1,19 @@
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+
 /*function myMap() {
   var uluru = {lat: 52.194589, lng: -2.221570}; 
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -31,4 +47,3 @@
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
-}
