@@ -98,21 +98,15 @@ window.onclick = function(event) {
     }
 }
 
-if(localStorage) {
-	$(document).ready(function() {
-		$(".save").click(function() {
-			// Get input name
-			var uname = $("#uname").val();
-			
-			// Store data
-    		localStorage.setItem("first_name", uname);
-			alert("Your first name is saved.");
-		});
-		$(".access").click(function() {
-			// Retrieve data
-    		alert("Hi, " + localStorage.getItem("first_name"));
-		});
-	});
-} else {
-    alert("Sorry, your browser do not support local storage.");
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
 }

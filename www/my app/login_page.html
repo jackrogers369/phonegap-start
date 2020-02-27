@@ -29,12 +29,10 @@ $result = mysqli_query($conn,$sql);
 <ul>
 	<li><a class="active" href="index.html">Home</a></li>
 	<li><a href="restaurantoffers.html">Restuarant Offers</a></li>
-	<li><a href="foodtype">Food Type</a></li>
 	<li><a href="map.html">Map</a></li>
 </ul>
 
-<p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
+<button type="button" id="toggleWatchBtn">Start Watching</button>
+    <div id="result">
+        <!--Position information will be inserted here-->
+    </div>
