@@ -97,3 +97,22 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+if(localStorage) {
+	$(document).ready(function() {
+		$(".save").click(function() {
+			// Get input name
+			var uname = $("#uname").val();
+			
+			// Store data
+    		localStorage.setItem("first_name", uname);
+			alert("Your first name is saved.");
+		});
+		$(".access").click(function() {
+			// Retrieve data
+    		alert("Hi, " + localStorage.getItem("first_name"));
+		});
+	});
+} else {
+    alert("Sorry, your browser do not support local storage.");
+}
