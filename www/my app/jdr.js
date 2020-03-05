@@ -4,6 +4,6 @@ $(document).ready(function(){
   });
 });
 
-Private Shared Function ReplaceNonASCIIChars(ByVal html As String) As String
-    Return Regex.Replace(html, "[^\u0000-\u007F]", "&nbsp;")
-End Function
+var str = $('.number').html();
+str.replace('&nbsp;', '');
+$('.number').html(str);
