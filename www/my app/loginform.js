@@ -5,13 +5,13 @@ var watchID;
         if(navigator.geolocation) {
             watchID = navigator.geolocation.watchPosition(successCallback);
         } else {
-            alert("Sorry, your browser does not support HTML5 geolocation.");
+            alert("Sorry, your browser does not support  geolocation.");
         }
     }
     function successCallback(position) {
         toggleWatchBtn.innerHTML = "Stop Watching";
         
-        // Check position has been changed or not before doing anything
+        // Check position has been changed 
         if(prevLat != position.coords.latitude || prevLong != position.coords.longitude) {
             
             // Set previous location
@@ -42,5 +42,15 @@ var watchID;
         }
     }
     
-    // Initialise the whole system (above)
+    // Initialise the system
     window.onload = startWatch;
+	
+
+
+
+
+
+
+
+
+//
