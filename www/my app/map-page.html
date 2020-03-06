@@ -8,11 +8,9 @@
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4RSokQQFBL_YZuLvAUuSVElxjW4OAUW4&callback=myMap">
-    </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4RSokQQFBL_YZuLvAUuSVElxjW4OAUW4&callback=myMap"></script>
  <script src="map-page.js"></script>
- <link rel="stylesheet" href="map-page.css" 
+ <link rel="stylesheet" href="map-page.css" >
 
     <!-- LOAD YOUR CSS FILE WHILE PAYING ATTENTION TO ITS PATH! -->
     
@@ -24,7 +22,26 @@
 <header data-role='header'><h1>JDR</h1>
 </header>
 
+
+
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="home" data-icon="home"></a></li>
+                    <li><a href="restaurant" data-icon="location"></a></li>
+                    <li><a href="#three" data-icon="navigation"></a></li>
+                </ul>
+            </div><!-- /navbar -->                            
+        </div>
+
 <div role="main" class="ul-content" id="map-canvas">
 <!-- map loads here -->
 </div>
 </div>
+
+
+
+        
+       
+
+    

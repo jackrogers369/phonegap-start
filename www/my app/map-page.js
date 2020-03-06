@@ -1,7 +1,4 @@
-/*
- * Google Maps documentation: http://code.google.com/apis/maps/documentation/javascript/basics.html
- * Geolocation documentation: http://dev.w3.org/geo/api/spec-source.html
- */
+
 $( document ).on( "pageinit", "#map-page", function() {
     var defaultLatLng = new google.maps.LatLng(52.195959, -2.225788);  // Default to Hollywood, CA when no geolocation support
     if ( navigator.geolocation ) {
@@ -19,7 +16,7 @@ $( document ).on( "pageinit", "#map-page", function() {
     }
     function drawMap(latlng) {
         var myOptions = {
-            zoom: 10,
+            zoom: 15,
             center: latlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -31,4 +28,8 @@ $( document ).on( "pageinit", "#map-page", function() {
             title: "Greetings!"
         });
     }
+
+
 });
+
+ 
