@@ -8,7 +8,10 @@
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
- <script src="jdr.js"></script>
+ <script src="map-page.js"></script>
+  <link rel="stylesheet" href="map-page.css" >
+
+
 
     <!-- LOAD YOUR CSS FILE WHILE PAYING ATTENTION TO ITS PATH! -->
     
@@ -18,7 +21,7 @@
 
 <body>
 <div data-role="page" id="home" data-url="home" data-theme="a">      
-<header data-role='header'><h1>劳伦</h1>
+<header data-role='header'><h1>JDR</h1>
 </header>
 <div data-role="content">
 <img src="hanbao5.jpg" alt="hanbao" width="100%" height="200"/>	
@@ -28,6 +31,7 @@
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <p><b>Hanabao: </b>Small, fast-food eatery offering a range of eastern & western style burgers plus craft cocktails.</p>
+<hr>
 <table data-role="table" id="Restaurant-table" class="ui-responsive">
 <thead>
 <tr>
@@ -58,6 +62,7 @@
 </tr>
 <tr>
 </table>
+<hr>
 <div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
 <div data-role="collapsible" data-filtertext="Chinese">
 <h3>Chinese</h3>
@@ -206,31 +211,193 @@ Value <span class="fa fa-star checked"></span>
 <h4>Terms and conditions</h4>
 <p>Through the normal functioning of the Google Maps Core Services, End Users provide personally identifiable information and Personal Data directly to Google, subject to the Google Privacy Policy</p>
 
-</div>
 
+</div>
 
 
         <div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
                     <li><a href="#home" data-icon="home"></a></li>
-                    <li><a href="#restaurant" data-icon="location"></a></li>
-                    <li><a href="#three" data-icon="navigation"></a></li>
+                    <li><a href="#restaurant" data-icon="info"></a></li>
+                    <li><a href="#map-page" data-icon="navigation"></a></li>
+                </ul>
+            </div>                           
+        </div>
+       
+
+    </div>
+</div>
+<!-- Start of second page -->
+<div data-role="page" id="restaurant" data-url="restaurant">
+<header data-role='header'><h1>JDR</h1>
+</header>
+<div data-role="content">
+<img src="askitlian.jpg" alt="hanbao" width="100%" height="200" >
+<p><b>YOUR CHOSEN OFFER  ASKItalian<br>
+2-4-1 EVERY MONDAY</b><br>
+Buy any 2 starters, mains, desserts & drinks & get the cheapest free. Available <b>EVERY MONDAY</b><br>
+Valid until 6th April 2021.</p>
+<ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+<li><a href="https://www.askitalian.co.uk/">ASK Italian <br>
+<p>Modern Italian restaurant chain serving long, stone-baked pizzas and antipasto on wooden boards.
+</p>
+</a></li>
+<li><a href="https://bills-website.co.uk/">Bills <br>
+<p>Contemporary European chain dishing up separate breakfast, afternoon tea, lunch and dinner menus.</p>
+</a></li>
+<li><a href="https://brownsworcester.co.uk/">Browns at the Quay<br>
+<p>Restaurant with global menu and fresh fish specials in converted, riverside warehouse with terrace.</p>
+</a></li>
+<li><a href="http://benedictos.com/">Benedicto's Itlian <br>
+<p>3-storey restaurant with exposed timber and stonework serving Italian classics with Sicilian input.</p>
+ </a></li>
+<li><a href="https://chestersrestaurant.co.uk/">Chesters Restaurant & bar <br>
+<p>Mexican cuisine, plus a vegetarian menu, in an atmospheric cellar space, plus a bright upstairs bar.
+</p></a></li>
+<li><a href="https://cosyclub.co.uk/">Cosy club <br> 
+<p> Cosy Clubs serve up relaxed dining, drinking and lounging in a really special setting with a dash of nostalgia.</p></a></li>
+<li><a href="https://www.millerandcarter.co.uk/restaurants/east-and-west-midlands/millerandcarterworcester">Miller & Carter</a></li>
+<li><a href="https://www.nandos.co.uk/">Nandos <br>
+<p>Afro-Portuguese chain restaurant serving flame-grilled chicken in spicy chilli sauce.</p></a></li>
+</ul>
+<h2> Please leave a review</h2> <p>So we can help other customer choose the perfect restaurant!</p>
+<form>
+<ul data-role="listview" data-inset="true">
+<li class="ui-field-contain">
+<label for="name2">Restaurant:</label>
+<input type="text" name="name2" id="name2" value="" data-clear-btn="true">
+</li>
+<li class="ui-field-contain">
+<label for="textarea2">Review:</label>
+<textarea cols="40" rows="8" name="textarea2" id="textarea2"></textarea>
+</li>
+<li class="ui-field-contain">
+<label for="slider2">Score:</label>
+<input type="range" name="slider2" id="slider2" value="0" min="0" max="10" data-highlight="true">
+</li>
+<li class="ui-body ui-body-b">
+<fieldset class="ui-grid-a">
+<div class="ui-block-b"><button type="submit" class="ui-btn ui-corner-all ui-btn-a">Submit</button></div>
+</fieldset>
+</li>
+</ul>
+</form>
+
+<h3> Keystones cocktail club </h3>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>  <b>  55 reviews </b>
+<p>1 Copenhagen Street, WR1 2HB,  +44 1905 731437,  Open: 17:00 - 01:00, <a href="https://www.keystonescocktailclub.co.uk/?utm_source=tripadvisor&utm_medium=referral"> Website</a> </p>
+<img src="keystones.JPG" alt="keystones" width="100%" height="200"/>
+<h4> Rating and reviews</h4>
+<p> <b> #119 </b>  of 225 Restaurants in Worcester</p>
+<hr>
+<h4>Ratings</h4> 
+<p>Food <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+
+<br><br>
+Service <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half-full"></span> 
+<br><br>
+Value <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half-full"></span>
+</p>
+
+
+<hr>
+<div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
+<div data-role="collapsible" data-filtertext="Reviews">
+<h3><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>    24 reviews </h3>
+<ul data-role="listview" data-inset="false">
+<li> A lot of laughs were had:)</li>
+<li>This place is such a giggle</li>
+<li>Popped in for 2-4-1 drinks. Absolute bargain. </li>
+</ul>
+</div>
+<div data-role="collapsible" data-filtertext="Indian">
+<h3><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> 17 reviews  </h3>
+<ul data-role="listview" data-inset="false">
+<li>Good happy hour</li>
+<li>Great student bar, bit pricey</li>
+<li>love the cocktails!</li>
+<li>Great night!</li>
+</ul>
+</div>
+<div data-role="collapsible" data-filtertext="Italian">
+<h3><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> 4 reviews </h3>
+<ul data-role="listview" data-inset="false">
+<li></li>
+<li>Okay</li>
+<li>Changed a bit </li>
+<li>Cool venue average cocktails</li>
+</ul>
+</div>
+<div data-role="collapsible" data-filtertext="Steak">
+<h3><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> 2 reviews  </h3>
+<ul data-role="listview" data-inset="false">
+<li>Just not my vibe</li>
+<li>Overpriced</li>
+
+
+</ul>
+</div>
+</div>
+
+ <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home"></a></li>
+                    <li><a href="#restaurant" data-icon="info"></a></li>
+                    <li><a href="#map-page" data-icon="navigation"></a></li>
                 </ul>
             </div><!-- /navbar -->                            
         </div>
        
 
     </div>
+</div>
 
-<!-- Start of second page -->
-<div data-role="page" id="restaurant" data-url="restaurant">
+<div data-role="page" id="map-page" data-url="map-page" data-theme="a">      
 <header data-role='header'><h1>JDR</h1>
 </header>
 <div data-role="content">
 
 
+<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home"></a></li>
+                    <li><a href="#restaurant" data-icon="info"></a></li>
+                    <li><a href="#map-page" data-icon="navigation"></a></li>
+                </ul>
+            </div><!-- /navbar -->                            
+        </div>
 
+<div role="main" class="ul-content" id="map-canvas">
+<!-- map loads here -->
+</div>
+</div>
 
 
 
