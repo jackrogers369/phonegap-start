@@ -4,12 +4,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+ <link rel="stylesheet" href="map-page.css" >
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
- <script src="map-page.js"></script>
-  <link rel="stylesheet" href="map-page.css" >
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4RSokQQFBL_YZuLvAUuSVElxjW4OAUW4&callback=myMap"></script>
+<script src="map-page.js"></script>
+
+
+
 
 
 
@@ -210,11 +214,18 @@ Value <span class="fa fa-star checked"></span>
 <div data-role="collapsible" class="ui-nodisc-icon ui-alt-icon">
 <h4>Terms and conditions</h4>
 <p>Through the normal functioning of the Google Maps Core Services, End Users provide personally identifiable information and Personal Data directly to Google, subject to the Google Privacy Policy</p>
-
+<div data-role="fieldcontain" class="ui-hide-label">
+    <fieldset data-role="controlgroup">
+	   <legend>Agree to the terms:</legend>
+	   <input type="checkbox" name="checkbox-agree" id="checkbox-agree" class="custom" />
+	   <label for="checkbox-agree">I agree</label>
+    </fieldset>
+</div>
 
 </div>
 
 
+</div>
         <div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
@@ -227,7 +238,13 @@ Value <span class="fa fa-star checked"></span>
        
 
     </div>
-</div>
+
+
+
+
+
+
+
 <!-- Start of second page -->
 <div data-role="page" id="restaurant" data-url="restaurant">
 <header data-role='header'><h1>JDR</h1>
@@ -263,7 +280,7 @@ Valid until 6th April 2021.</p>
 </ul>
 <h2> Please leave a review</h2> <p>So we can help other customer choose the perfect restaurant!</p>
 <form>
-<ul data-role="listview" data-inset="true">
+<ul data-role="listview" data-inset="true"  data-ajax="false">
 <li class="ui-field-contain">
 <label for="name2">Restaurant:</label>
 <input type="text" name="name2" id="name2" value="" data-clear-btn="true">
@@ -326,10 +343,10 @@ Value <span class="fa fa-star checked"></span>
 <ul data-role="listview" data-inset="false">
 <li> A lot of laughs were had:)</li>
 <li>This place is such a giggle</li>
-<li>Popped in for 2-4-1 drinks. Absolute bargain. </li>
+<li>2-4-1: Absolute bargain. </li>
 </ul>
 </div>
-<div data-role="collapsible" data-filtertext="Indian">
+<div data-role="collapsible" data-filtertext="4 star">
 <h3><span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
@@ -341,27 +358,34 @@ Value <span class="fa fa-star checked"></span>
 <li>Great night!</li>
 </ul>
 </div>
-<div data-role="collapsible" data-filtertext="Italian">
+<div data-role="collapsible" data-filtertext="3 star">
 <h3><span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span> 4 reviews </h3>
 <ul data-role="listview" data-inset="false">
-<li></li>
 <li>Okay</li>
 <li>Changed a bit </li>
 <li>Cool venue average cocktails</li>
 </ul>
 </div>
-<div data-role="collapsible" data-filtertext="Steak">
+<div data-role="collapsible" data-filtertext="2 star">
 <h3><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span> 2 reviews  </h3>
+<span class="fa fa-star checked" span class="ui-li-count"></span> 2 reviews  </h3>
 <ul data-role="listview" data-inset="false">
 <li>Just not my vibe</li>
 <li>Overpriced</li>
-
+<hr>
 
 </ul>
 </div>
+<hr>
+
+<h3> Lunchtime deals for £10 or less!</h3>
+<p> The anchor, Diglis- <b> 2 for £12 </b> <br>
+ASK Italian, Cathedral Square- <b> 2 courses for £9.95</b> <br>
+Burger shop, Cherry Tree- <b> burger for £5 </b> <br>
+Thai Gallery, Friar Street- <b> main course from £8.95</b></p>
+
 </div>
 
  <div data-role="footer" data-position="fixed" data-tap-toggle="false">
@@ -378,12 +402,15 @@ Value <span class="fa fa-star checked"></span>
     </div>
 </div>
 
+
+<!-- this is page three -->
+
 <div data-role="page" id="map-page" data-url="map-page" data-theme="a">      
 <header data-role='header'><h1>JDR</h1>
 </header>
 <div data-role="content">
 
-
+</div>
 <div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
