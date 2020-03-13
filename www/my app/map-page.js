@@ -1,6 +1,6 @@
 
 $( document ).on( "pageinit", "#map-page", function() {
-    var defaultLatLng = new google.maps.LatLng(52.195959, -2.225788);  // Default to Hollywood, CA when no geolocation support
+    var defaultLatLng = new google.maps.LatLng(52.195959, -2.225788);  // Default to Worcester university
     if ( navigator.geolocation ) {
         function success(pos) {
             // Location found, show map with these coordinates
@@ -22,11 +22,14 @@ $( document ).on( "pageinit", "#map-page", function() {
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
         // Add an overlay to the map of current lat/lng
-        var marker = new google.maps.Marker({
+        
+		var marker = new google.maps.Marker({
             position: latlng,
             map: map,
             title: "Greetings!"
         });
+		
+		
     }
 
 
