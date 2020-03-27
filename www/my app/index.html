@@ -36,7 +36,8 @@
 <span class="fa fa-star checked"></span>
 <p><b>Hanabao: </b>Small, fast-food eatery offering a range of eastern & western style burgers plus craft cocktails.</p>
 <hr>
-<table data-role="table" id="Restaurant-table" class="ui-responsive">
+<h4> Click on the columns button to filter the table headings that you want</h4>
+<table data-role="table" data-mode="columntoggle" id="Restaurant-table" class="ui-responsive">
 <thead>
 <tr>
 <th data-priority="1">Rank:</th>
@@ -240,11 +241,6 @@ Value <span class="fa fa-star checked"></span>
     </div>
 
 
-
-
-
-
-
 <!-- Start of second page -->
 <div data-role="page" id="restaurant" data-url="restaurant">
 <header data-role='header'><h1>JDR</h1>
@@ -279,6 +275,8 @@ Pollo e Funghi
 </p>
 </div>
 <br>
+<hr>
+<h3> Places to eat in Worcester</h3>
 <hr>
 <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true" >
 <li><a href="https://www.askitalian.co.uk/">ASK Italian <br>
@@ -403,7 +401,41 @@ Value <span class="fa fa-star checked"></span>
 </div>
 <hr>
 
+<h3>Book a table online</h3>
+<p> Just click on the restaurant you like</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="tobycarvery.jpg" style="width:100%" height="150px">
+  <div class="text">Caption Text</div>
 </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="timberdine-harvester.jpg" style="width:100%" height="150px">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+ <img src="the-slug-and-lettuce.jpg" style="width:100%" height="150px">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
 
  <div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
