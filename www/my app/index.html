@@ -1,507 +1,287 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang='en-GB'>
 <head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
- <link rel="stylesheet" href="map-page.css" >
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4RSokQQFBL_YZuLvAUuSVElxjW4OAUW4&callback=myMap"></script>
-<script src="map-page.js"></script>
-
-
-
-
-
-
-    <!-- LOAD YOUR CSS FILE WHILE PAYING ATTENTION TO ITS PATH! -->
-    
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset='utf-8'>
+  	<title>Ractive test</title>
+  	<link href="jquery-mobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+	<script src="jquery-mobile/jquery-1.11.1.min.js"></script>
+  	<script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4RSokQQFBL_YZuLvAUuSVElxjW4OAUW4&callback"></script>
+    <script src="ractive/ractive.js"></script>
+	<script src="index.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-
 <body>
-<div data-role="page" id="home" data-url="home" data-theme="a">      
-<header data-role='header'><h1>JDR</h1>
-</header>
-<div data-role="content">
-<img src="hanbao5.jpg" alt="hanbao" width="100%" height="200"/>	
+
+  
+    
+    <div data-role="page" id="pageone">
+  
+  		<div data-role="header">
+    		<h1>JDR</h1>
+  		</div>
+  
+  		<div data-role="content" id="content">
+		
+		 <script id='hanbao' type='text/ractive'>
+ <img src="hanbao5.jpg" alt="hanbao" width="100%" height="200"/>	
 <h2> Star ranking</h2>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<p><b>Hanabao: </b>Small, fast-food eatery offering a range of eastern & western style burgers plus craft cocktails.</p>
+<span class="fa fa-star checked"></span>
+		<p>
+		<b> {{#each restaurant}} <b>
+			 {{name}} 
+			 {{/each}}
+			 
+		</p>
+		<hr>
+  
+<h2> Coffee#1 </h2>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> <b> 118 reviews </b>
+<p>{{#each restaurant}}
+{{coffee}}
+{{/each}} <a href="https://www.coffee1.co.uk/?utm_source=tripadvisor&utm_medium=referral"> Website</a>, <a href="https://www.coffee1.co.uk/menu/"> Menu</a></p> 	
+<img src="coffee.jpg" alt="coffee" width="100%" height="200"/>		
+<p>{{#each restaurant}}
+{{cafe}}
+{{/each}} </p>
+<p>{{#each restaurant}}
+{{rt}}
+{{/each}} </p>
+<p>{{#each restaurant}}
+<b>{{certificate}}</b>
+{{/each}} </p>
+
+<h4> Ratings </h4>
+<p>{{#each restaurant}}
+{{food}}
+{{/each}} <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half-full"></span> </p>
+<p>{{#each restaurant}}
+{{service}}
+{{/each}} <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> </p>
+<p>{{#each restaurant}}
+{{value}}
+{{/each}} <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span></p>
 <hr>
-<h4> Click on the columns button to filter the table headings that you want</h4>
-<table data-role="table" data-mode="columntoggle" id="Restaurant-table" class="ui-responsive">
-<thead>
-<tr>
-<th data-priority="1">Rank:</th>
-<th data-priority="persist">Restaurant name:</th>
-<th data-priority="2">Address:</th>
-<th data-priority="3">Rating:</abbr></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>1</th>
-<td><a href="http://www.singaporerestaurant.co.uk/" data-rel="external">Singapore Restaurant</a></td>
-<td>29 Friar st</td>
-<td>5</td>     
-</tr>
-<tr>
-<th>2</th>
-<td><a href="https://www.twocraftybrewers.co.uk/sugo" data-rel="external">SUGO</a></td>
-<td>30 The Tything</td>
-<td>5</td>      
-</tr>
-<tr>
-<th>3</th>
-<td><a href="https://www.askitalian.co.uk/" data-rel="external">ASK Italian</a></td>
-<td>2 High Street Cathedral Square</td>
-<td>5</td>
-</tr>
-<tr>
-</table>
+<h2> Keystones cocktail club </h2>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>  <b>  55 reviews </b>
+<p>{{#each restaurant}}
+{{keystones}}
+<a href='{{Website}}'>{{nm}}</a>
+{{/each}} </p>
+<img src="keystones.JPG" alt="keystones" width="100%" height="200"/>
+<p>{{#each restaurant}}
+{{ks}}
+{{/each}} </p>
+
+<p>{{#each restaurant}}
+{{f}}
+{{/each}} <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span> </p>
+<p>{{#each restaurant}}
+{{s}}
+{{/each}} <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half-full"></span> </p>
+<p>{{#each restaurant}}
+{{v}}
+{{/each}} <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half-full"></span> </p>
 <hr>
-<div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
-<div data-role="collapsible" data-filtertext="Chinese">
-<h3>Chinese</h3>
-<ul data-role="listview" data-inset="false">
-<li>Chung Ying Garden <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>Singapore Restaurant
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>Ruby 
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-</li>
-<li>Wok star
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-</li>
-</ul>
-</div>
-<div data-role="collapsible" data-filtertext="Indian">
-<h3>Indian </h3>
-<ul data-role="listview" data-inset="false">
-<li>Delhi spice 
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-</li>
-<li>Massalla lounge 
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>Cafe Mela 
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>Bombay Palace
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-</li>
-</ul>
-</div>
-<div data-role="collapsible" data-filtertext="Italian">
-<h3>Italian </h3>
-<ul data-role="listview" data-inset="false">
-<li>Benedicto's 
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>SUGO 
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>Ask Italian
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-</li>
-<li>Valentinos
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-</ul>
-</div>
-<div data-role="collapsible" data-filtertext="Steak">
-<h3>Steak houses</h3>
-<ul data-role="listview" data-inset="false">
-<li>Miller & Carter
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>Ounce Bar & Kitchen
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>Friar<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-<li>Globe Bistro
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></li>
-</ul>
-</div>
-</div>
+<h2> Offers </h2>
+<p><b>{{#each restaurant}}
+<h3>{{askitlian}}</h3>
+{{/each}} </b></p>
+<p>{{#each restaurant}}
+{{deals}}
+{{/each}} </p>
+<img src="askitlian.jpg" alt="Askitlian" width="100%" height="200" >
 
-<h3> Coffee#1 </h3>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>  <b> 118 reviews </b>
-<p>4-6 Pump Street, WR1 2QT, +44 1905 723376,  Open: 08:00 - 18:00, <a href="https://www.coffee1.co.uk/?utm_source=tripadvisor&utm_medium=referral"> Website</a>, <a href="https://www.coffee1.co.uk/menu/"> Menu</a></p>
-<img src="coffee.jpg" alt="coffee" width="100%" height="200"/>	
-<h4> Rating and reviews</h4>
-<p> <b>#18 </b> of 76 Cafe in worcester <br> <b>#73 </b> of 225 Restaurants in Worcester <br> <b> Certificate of Excellence2019 Winner</b> </p>
-<hr>
-<h4>Ratings</h4> 
-<p>Food <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star-half-full"></span>
-<br><br>
-Service <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span> 
-<br><br>
-Value <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-</p>
- <hr>
-<div data-role="collapsible" class="ui-nodisc-icon ui-alt-icon">
-<h4>Terms and conditions</h4>
-<p>Through the normal functioning of the Google Maps Core Services, End Users provide personally identifiable information and Personal Data directly to Google, subject to the Google Privacy Policy</p>
-<div data-role="fieldcontain" class="ui-hide-label">
-    <fieldset data-role="controlgroup">
-	   <legend>Agree to the terms:</legend>
-	   <input type="checkbox" name="checkbox-agree" id="checkbox-agree" class="custom" />
-	   <label for="checkbox-agree">I agree</label>
-    </fieldset>
-</div>
+<br>
+<p><b>{{#each restaurant}}
+<h3>{{taste}}</h3>
+{{tastecard}}
+{{/each}} </b></p>
+<a href="https://www.tastecard.co.uk/restaurants/Worcester-Worcestershire-England"><img src="card.png" alt= "tastcard" width= "100%" height="200"></a>
 
-</div>
+<br>
+<p><b>{{#each restaurant}}
+<h3>{{miller}}</h3>
+{{carter}}
+{{/each}} </b></p>
+<a href="https://www.millerandcarter.co.uk/restaurants/east-and-west-midlands/millerandcarterworcester/signup"><img src="miller.JPG" alt= "tastcard" width= "100%" height="200"></a>
 
 
-</div>
-        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+    </script>	
+	
+
+  		</div>
+  
+  		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#home" data-icon="home"></a></li>
+                    <li><a href="#pageone" data-icon="home"></a></li>
                     <li><a href="#restaurant" data-icon="info"></a></li>
                     <li><a href="#map-page" data-icon="navigation"></a></li>
                 </ul>
             </div>                           
         </div>
-       
-
-    </div>
-
-
+	</div>
+	
+	
+	
+	
 <!-- Start of second page -->
 <div data-role="page" id="restaurant" data-url="restaurant">
 <header data-role='header'><h1>JDR</h1>
 </header>
-<div data-role="content">
-<img src="askitlian.jpg" alt="hanbao" width="100%" height="200" >
-<p><b>YOUR CHOSEN OFFER  ASKItalian<br>
-2-4-1 EVERY MONDAY</b><br>
-Buy any 2 starters, mains, desserts & drinks & get the cheapest free. Available <b>EVERY MONDAY</b><br>
-Valid until 6th April 2021.</p>
+<div data-role="content" id="content1">
 
-<div data-role="collapsible" class="ui-nodisc-icon ui-alt-icon">
-<h4>Show menu</h4>
-<p><b> STARTERS</b><br><br>
-Antipasto Fritto <br>
-Cheese Fonduta <br>
-Bruschetta <br>
-Calamari <br></br>
-<b> AL FORNO </b> <br><br>
-Lasagne<br>
-Sausage Cannelloni<br><br>
-<b> CLASSIC PASTA </b><br><br>
-Penne Arrabiata <br>
-Fettuccine Bolognese <br>
-Spaghetti al Pomodoro <br><br>
-<b>CLASSIC PIZZA</b><br><br>
-Margherita<br>
-Stromboli<br>
-Verdure<br>
-Pollo e Funghi
+<script id='template' type='text/ractive'>
+<h3 align="center">Best ranking restaurants in Worcester</h3>
+	<table align="center">
+	  <tr>
+	  	<th>#</th>
+	    <th class="sortable" on-click="@.sort('name')">Restaurant Name</th>
+	    <th class="sortable" on-click="@.sort('realname')">Address</th>
+	    <th class="sortable" on-click="@.sort('power')">Rating</th>
+		<th class="sortable" on-click="@.sort('power')">Menu</th>
+	  </tr>
+	
+	  {{#each Restaurants: num}}
+	    <tr>
+	    	<td>{{num + 1}}</td>
+	      <td><a href='{{Website}}'>{{name}}</a></td>
+	      <td>{{restaurant}}</td>
+	      <td> <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>  
+<span class="fa fa-star checked"></span>{{Rating}}</td>
+<td><i class="material-icons">restaurant</i><a href='{{menu}}'>{{food}}</a></td> 
+	    </tr>
+	  {{/each}}
+	</table>
 
-</p>
-</div>
 <br>
 <hr>
-<h3> Places to eat in Worcester</h3>
-<hr>
-<ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true" >
-<li><a href="https://www.askitalian.co.uk/">ASK Italian <br>
-<p>Modern Italian restaurant chain serving long, stone-baked pizzas and antipasto on wooden boards.
-</p>
-</a></li>
-<li><a href="https://bills-website.co.uk/">Bills <br>
-<p>Contemporary European chain dishing up separate breakfast, afternoon tea, lunch and dinner menus.</p>
-</a></li>
-<li><a href="https://brownsworcester.co.uk/">Browns at the Quay<br>
-<p>Restaurant with global menu and fresh fish specials in converted, riverside warehouse with terrace.</p>
-</a></li>
-<li><a href="http://benedictos.com/">Benedicto's Itlian <br>
-<p>3-storey restaurant with exposed timber and stonework serving Italian classics with Sicilian input.</p>
- </a></li>
-<li><a href="https://chestersrestaurant.co.uk/">Chesters Restaurant & bar <br>
-<p>Mexican cuisine, plus a vegetarian menu, in an atmospheric cellar space, plus a bright upstairs bar.
-</p></a></li>
-<li><a href="https://cosyclub.co.uk/">Cosy club <br> 
-<p> Cosy Clubs serve up relaxed dining, drinking and lounging in a really special setting with a dash of nostalgia.</p></a></li>
-<li><a href="https://www.millerandcarter.co.uk/restaurants/east-and-west-midlands/millerandcarterworcester">Miller & Carter</a></li>
-<li><a href="https://www.nandos.co.uk/">Nandos <br>
-<p>Afro-Portuguese chain restaurant serving flame-grilled chicken in spicy chilli sauce.</p></a></li>
-</ul>
-<h2> Please leave a review</h2> <p>So we can help other customer choose the perfect restaurant!</p>
-<form>
-<ul data-role="listview" data-inset="true"  data-ajax="false">
-<li class="ui-field-contain">
-<label for="name2">Restaurant:</label>
-<input type="text" name="name2" id="name2" value="" data-clear-btn="true">
-</li>
-<li class="ui-field-contain">
-<label for="textarea2">Review:</label>
-<textarea cols="40" rows="8" name="textarea2" id="textarea2"></textarea>
-</li>
-<li class="ui-field-contain">
-<label for="slider2">Score:</label>
-<input type="range" name="slider2" id="slider2" value="0" min="0" max="10" data-highlight="true">
-</li>
-<li class="ui-body ui-body-b">
-<fieldset class="ui-grid-a">
-<div class="ui-block-b"><button type="submit" class="ui-btn ui-corner-all ui-btn-a">Submit</button></div>
-</fieldset>
-</li>
-</ul>
-</form>
-
-<h3> Keystones cocktail club </h3>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>  <b>  55 reviews </b>
-<p>1 Copenhagen Street, WR1 2HB,  +44 1905 731437,  Open: 17:00 - 01:00, <a href="https://www.keystonescocktailclub.co.uk/?utm_source=tripadvisor&utm_medium=referral"> Website</a> </p>
-<img src="keystones.JPG" alt="keystones" width="100%" height="200"/>
-<h4> Rating and reviews</h4>
-<p> <b> #119 </b>  of 225 Restaurants in Worcester</p>
-<hr>
-<h4>Ratings</h4> 
-<p>Food <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-
-<br><br>
-Service <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star-half-full"></span> 
-<br><br>
-Value <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star-half-full"></span>
-</p>
-
-
-<hr>
-<div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
-<div data-role="collapsible" data-filtertext="Reviews">
-<h3><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>    24 reviews </h3>
-<ul data-role="listview" data-inset="false">
-<li> A lot of laughs were had:)</li>
-<li>This place is such a giggle</li>
-<li>2-4-1: Absolute bargain. </li>
-</ul>
-</div>
-<div data-role="collapsible" data-filtertext="4 star">
-<h3><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span> 17 reviews  </h3>
-<ul data-role="listview" data-inset="false">
-<li>Good happy hour</li>
-<li>Great student bar, bit pricey</li>
-<li>love the cocktails!</li>
-<li>Great night!</li>
-</ul>
-</div>
-<div data-role="collapsible" data-filtertext="3 star">
-<h3><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span> 4 reviews </h3>
-<ul data-role="listview" data-inset="false">
-<li>Okay</li>
-<li>Changed a bit </li>
-<li>Cool venue average cocktails</li>
-</ul>
-</div>
-<div data-role="collapsible" data-filtertext="2 star">
-<h3><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked" span class="ui-li-count"></span> 2 reviews  </h3>
-<ul data-role="listview" data-inset="false">
-<li>Just not my vibe</li>
-<li>Overpriced</li>
-</ul>
-</div>
-<hr>
-
-<h3>Book a table online</h3>
-<p> Just click on the restaurant you like</p>
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 5</div>
-  <a href="https://www.tobycarvery.co.uk/restaurants/midlands/worcesterworcestershire/tablebooking"><img src="tobycarvery.jpg" style="width:100%" height="150px"></a>
-  <div class="text">Toby Carvery<br><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span> </div>
+<h3 align="center"> Top three restaurants </h3>
+ <div class="row">
+  <div class="column">
+    <img src="singapore.jpg" alt="Snow" style="width:100%" style="height:150px">
+	<div class="desc">Singapore Restaurant - Chinese, Asian</div>
+  </div>
+  <div class="column">
+   <img src="sugo.jpg" alt="Forest" style="width:100%" style="height:150px">
+	<div class="desc">Sugo - Italian, Mediterranean</div>
+  </div>
+  <div class="column">
+    <img src="askitalian.jpg" alt="Mountains" style="width:100%" style="height:150px">
+	<div class="desc">ASK Italian - Italian, pizza, Vegetarian friendly </div>
+  </div>
 </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 5</div>
-  <a href="https://www.harvester.co.uk/restaurants/eastandwestmidlands/thetimberdineworcester/tablebooking"><img src="timberdine-harvester.jpg" style="width:100%" height="150px"></a>
-  <div class="text">Timberdine Harvester <br><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span> </div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 5</div>
-  <a href="https://www.slugandlettuce.co.uk/worcester/table-booking"><img src="the-slug-and-lettuce.jpg" style="width:100%" height="150px"></a>
-  <div class="text">Slug & Lettuce <br> <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star-half-full"></span></div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 5</div>
-  <a href="https://bills-website.co.uk/restaurants/worcester"><img src="bills.jpg" style="width:100%" height="150px"></a>
-  <div class="text">Bills <br><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">5 / 5</div>
-  <a href="https://www.swanpubworcester.co.uk/book-your-table/"><img src="swan.jpg" style="width:100%" height="150px"></a>
-  <div class="text">Swan <br><span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span></div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
+<h3 align="center">  Top three Chinese Restaurants </h3>
+ <div class="row">
+  <div class="column">
+    <img src="chung.jpg" alt="Snow" style="width:100%" style="height:150px">
+	<div class="desc">Chung Ying Garden </div>
+  </div>
+  <div class="column">
+   <img src="singapore.jpg" alt="Forest" style="width:100%" style="height:150px">
+	<div class="desc">Singapore Restaurant </div>
+  </div>
+  <div class="column">
+    <img src="rubys.jpg" alt="Mountains" style="width:100%" style="height:150px">
+	<div class="desc">Rubys </div>
+  </div>
 </div>
 
 
+<h3 align="center">  Worcester Cheap Eats </h3>
+ <div class="row">
+  <div class="column">
+    <img src="black.jpg" alt="Snow" style="width:100%" style="height:150px">
+	<div class="desc">Black & Whit3 - Cafe, British</div>
+  </div>
+  <div class="column">
+   <img src="waylands.jpg" alt="Forest" style="width:100%" style="height:150px">
+	<div class="desc">Wayland's Yard - Cafe, British </div>
+  </div>
+  <div class="column">
+    <img src="traditional-breakfast.jpg" alt="Mountains" style="width:100%" style="height:150px">
+	<div class="desc">Foleys Cafe - Wuick bites, Cafe </div>
+  </div>
+</div>
+
+
+</script>
+
+</div>
  <div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#home" data-icon="home"></a></li>
+                    <li><a href="#pageone" data-icon="home"></a></li>
                     <li><a href="#restaurant" data-icon="info"></a></li>
                     <li><a href="#map-page" data-icon="navigation"></a></li>
                 </ul>
             </div><!-- /navbar -->                            
         </div>
-       
-
-    </div>
-</div>
-</div>
-
-<!-- this is page three -->
+  </div>  
+	
+</div>	
 
 <div data-role="page" id="map-page" data-url="map-page" data-theme="a">      
 <header data-role='header'><h1>JDR</h1>
 </header>
 <div data-role="content">
 
+
 </div>
 <div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#home" data-icon="home"></a></li>
+                    <li><a href="#pageone" data-icon="home"></a></li>
                     <li><a href="#restaurant" data-icon="info"></a></li>
                     <li><a href="#map-page" data-icon="navigation"></a></li>
                 </ul>
             </div><!-- /navbar -->                            
         </div>
-
-<div role="main" class="ul-content" id="map-canvas">
+<div role="main" id="map-canvas">
 <!-- map loads here -->
 </div>
+
 </div>
-
-
-
+	
+	
 </body>
 </html>

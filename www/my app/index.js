@@ -1,112 +1,127 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-	alert("Recieved event");
-        console.log('Received Event: ' + id);
-    }
+
+
+
+Ractive.DEBUG = false;
+
+
+
+
+
+
+
+
+$(document).on("pageinit","#pageone", onPageCreated);
+
+//some example data
+hanbao = [
+  { name: 'Hanbao: '},
+  { name: ' Small, fast-food eatery offering a range of eastern & western style burgers plus craft cocktails.'},
+  { coffee: '4-6 Pump Street, WR1 2QT, +44 1905 723376,  Open: 08:00 - 18:00, '},
+  { cafe:'#18  of 76 Cafe in worcester'},
+  { rt: '#73 of 225 Restaurants in Worcester'},
+  { certificate:'Certificate of Excellence2019 Winner'},
+  { food:'Food' },
+  { service:'Service'},
+  { value:'Value'},
+  { nm: 'Website', keystones:'1 Copenhagen Street, WR1 2HB,  +44 1905 731437,  Open: 17:00 - 01:00,', menu: 'https://www.keystonescocktailclub.co.uk/?utm_source=tripadvisor&utm_medium=referral'},
+  { ks: '# 119 of 225 Restaurants in Worcester'},
+  { f: 'Food'},
+  { s: 'Service'},
+  { v: 'Value'},
+  { askitlian: '2-4-1 EVERY MONDAY ', deals:'Buy any 2 starters, mains, desserts & drinks & get the cheapest free. Available EVERY MONDAY'},
+  { taste: 'Taste card', tastecard:'Get 2 for 1 meals or 50% off food at 13 restaurants in Worcester, Just click on the card for the list of restaurants'},
+  { miller: 'Miller and carter', carter:'Will treat you to a complimentary glass of wine when you sign up'},
+];
+
+
+
+function onPageCreated() {
+	var ractive = new Ractive({
+		  // The `el` option can be a node, an ID, or a CSS selector.
+		  el: '#content',
+		  target: '#target',
+	
+		  // We could pass in a string, but for the sake of convenience
+		  // we're passing the ID of the <script> tag above.
+	  template: '#hanbao',
+	
+		  // Here, we're passing in some initial data
+		  data: { restaurant: hanbao }
+		  
+		});
 };
-var slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+$(document).on("pageinit","#restaurant", onPageCreated2);
+//some example data
+var ractive, Restaurants;
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+Rest_Choices = [
+  { name: 'Singapore Restaurant', 	  restaurant: '29 Friar ST',     Rating: ' 5/5',    Website: 'http://www.singaporerestaurant.co.uk/', food: ' Menu', menu: 'http://www.singaporerestaurant.co.uk/menu/'},
+  { name: 'SUGO',      restaurant: '30 The Tything',   Rating: ' 5/5',      Website: 'https://www.twocraftybrewers.co.uk/sugo', food: ' Menu', menu: 'https://www.twocraftybrewers.co.uk/application/files/9015/8350/7266/Lamb-Resturant-menu.pdf' },
+  { name: 'ASK Italian',        restaurant: '2 High street',      Rating: ' 5/5', Website: 'https://www.askitalian.co.uk/' , food: ' Menu', menu: 'https://www.askitalian.co.uk/menu/'},
+  { name: 'Hanbao',    restaurant: '4 Foregate St',   Rating: ' 5/5',     Website: 'https://www.hanbao.co.uk/', food: ' Menu', menu: 'https://www.hanbao.co.uk/food/' },
+  { name: 'Globe Bistro',    restaurant: '41 Friar St',   Rating: ' 5/5',     Website: 'https://globebistro.net/', food: ' Menu', menu: 'https://globebistro.net/globe-menus/menu/todays-menu/'},
+  { name: 'Pasha Everest',    restaurant: '56 St Johns',   Rating: ' 5/5',     Website: 'https://pashaeverest.co.uk/' , food: ' Menu', menu: 'https://pashaeverest.co.uk/menu-1.html'},
+  { name: 'Burger shop',    restaurant: 'Arch 46 Cherry Tree ',   Rating: ' 5/5',     Website: 'https://aruleoftum.com/burgershopworc', food: ' Menu', menu: 'https://aruleoftum.com/burgershopworc' },
+
+ 
+];
+function onPageCreated2() {
+	var ractive = new Ractive({
+		  // The `el` option can be a node, an ID, or a CSS selector.
+		  el: '#content1',
+		    target: '#target',
+	
+		  // We could pass in a string, but for the sake of convenience
+		  // we're passing the ID of the <script> tag above.
+	  template: '#template',
+	
+		  // Here, we're passing in some initial data
+		  data: { Restaurants: Rest_Choices },
+		    sort: function( column ) {
+  	alert( 'Sorting by' + column )
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+		});
+		
+};
 
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-function clickCounter() {
-  if (typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+1;
+$( document ).on( "pageinit", "#map-page", function() {
+    var defaultLatLng = new google.maps.LatLng(52.195959, -2.225788);  // Default to Worcester university
+    if ( navigator.geolocation ) {
+        function success(pos) {
+            // Location found, show map with these coordinates
+            drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+        }
+        function fail(error) {
+            drawMap(defaultLatLng);  // Failed to find location, show default map
+        }
+        // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
+        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
     } else {
-      localStorage.clickcount = 1;
+        drawMap(defaultLatLng);  // No geolocation support, show default map
     }
-    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-  } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-  }
-}
+    function drawMap(latlng) {
+        var myOptions = {
+            zoom: 15,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+        // Add an overlay to the map of current lat/lng
+        
+		var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: "Your location"
+        });
+		
+		
+    }
+
+
+});
+
+
+

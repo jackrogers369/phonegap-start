@@ -1,0 +1,32 @@
+
+	
+	
+	
+//some example data
+var ractive, Restaurants;
+
+Rest_Choices = [
+  { name: 'Singapore Restaurant', 	  restaurant: '29 Friar ST',     Rating: ' 5/5',    Website: 'http://www.singaporerestaurant.co.uk/'},
+  { name: 'SUGO',      restaurant: '30 The Tything',   Rating: ' 5/5',      Website: 'https://www.twocraftybrewers.co.uk/sugo' },
+  { name: 'ASK Italian',        restaurant: '2 High street',      Rating: ' 5/5', Website: 'https://www.askitalian.co.uk/' },
+  { name: 'Hanbao',    restaurant: '4 Foregate St',   Rating: ' 5/5',     Website: 'https://www.hanbao.co.uk/' }
+];
+
+
+function onPageCreated() {
+	var ractive = new Ractive({
+		  // The `el` option can be a node, an ID, or a CSS selector.
+		  el: '#content',
+		    target: '#target',
+	
+		  // We could pass in a string, but for the sake of convenience
+		  // we're passing the ID of the <script> tag above.
+	  template: '#template',
+	
+		  // Here, we're passing in some initial data
+		  data: { Restaurants: Rest_Choices },
+		    sort: function( column ) {
+  	alert( 'Sorting by' + column )
+  }
+		});
+}
