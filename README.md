@@ -1,6 +1,6 @@
 # Hello World PhoneGap Application [![bitHound Score][bithound-img]][bithound-url]
 
-> A Hello World application built with PhoneGap
+> A mobile application built with PhoneGapBuild i would like this application to be tested on an apple device if possible please. 
 
 ## Usage
 
@@ -8,7 +8,7 @@
 
 In your browser, open the file:
 
-    /www/index.html
+    /www/myapp/index.html
 
 ### PhoneGap CLI
 

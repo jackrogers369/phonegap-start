@@ -6,6 +6,7 @@
   	<link href="jquery-mobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
 	<script src="jquery-mobile/jquery-1.11.1.min.js"></script>
   	<script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+	<!-- The functionality of the map is provided by a JavaScript library located at Google -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4RSokQQFBL_YZuLvAUuSVElxjW4OAUW4&callback"></script>
     <script src="ractive/ractive.js"></script>
 	<script src="index.js"></script>
@@ -17,9 +18,9 @@
 <body>
 
   
-    
+    <!-- Start of first page -->
     <div data-role="page" id="pageone">
-  
+  <!-- Document Header Starts -->
   		<div data-role="header">
     		<h1>JDR</h1>
   		</div>
@@ -27,8 +28,17 @@
   		<div data-role="content" id="content">
 		
 		 <script id='hanbao' type='text/ractive'>
+		 
+		<!-- The alt attribute provides an alternate text for an image -->
+		
  <img src="hanbao5.jpg" alt="hanbao" width="100%" height="200"/>	
+ 
+ <!-- The <h1> to <h6> tags are used to define HTML headings -->
+ 
 <h2> Star ranking</h2>
+
+<!-- indicates star ratings  -->
+
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
@@ -46,10 +56,14 @@
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span> <b> 118 reviews </b>
+<span class="fa fa-star checked"></span> <!--The <b> tag specifies bold text without any extra importance--><b> 118 reviews </b>
+
 <p>{{#each restaurant}}
 {{coffee}}
 {{/each}} <a href="https://www.coffee1.co.uk/?utm_source=tripadvisor&utm_medium=referral"> Website</a>, <a href="https://www.coffee1.co.uk/menu/"> Menu</a></p> 	
+
+<!--The href attribute specifies the URL of the page the link goes to -->
+
 <img src="coffee.jpg" alt="coffee" width="100%" height="200"/>		
 <p>{{#each restaurant}}
 {{cafe}}
@@ -82,6 +96,8 @@
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span></p>
 <hr>
+
+
 <h2> Keystones cocktail club </h2>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
@@ -116,7 +132,11 @@
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star-half-full"></span> </p>
+
+<!--The <hr> tag defines a thematic break in an HTML page-->
+
 <hr>
+
 <h2> Offers </h2>
 <p><b>{{#each restaurant}}
 <h3>{{askitlian}}</h3>
@@ -125,6 +145,8 @@
 {{deals}}
 {{/each}} </p>
 <img src="askitlian.jpg" alt="Askitlian" width="100%" height="200" >
+
+<!--The <br> tag inserts a single line break-->
 
 <br>
 <p><b>{{#each restaurant}}
@@ -149,6 +171,7 @@
   		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
             <div data-role="navbar">
                 <ul>
+				<!-- Link to an element with a specified id within a page -->
                     <li><a href="#pageone" data-icon="home"></a></li>
                     <li><a href="#restaurant" data-icon="info"></a></li>
                     <li><a href="#map-page" data-icon="navigation"></a></li>
@@ -168,8 +191,13 @@
 
 <script id='template' type='text/ractive'>
 <h3 align="center">Best ranking restaurants in Worcester</h3>
+
+<!--The <table> tag defines an HTML table-->
+
 	<table align="center">
+	<!--The <tr> tag defines a row in an HTML table-->
 	  <tr>
+	  <!--The <th> tag defines a header cell in an HTML table.-->
 	  	<th>#</th>
 	    <th class="sortable" on-click="@.sort('name')">Restaurant Name</th>
 	    <th class="sortable" on-click="@.sort('realname')">Address</th>
@@ -182,11 +210,7 @@
 	    	<td>{{num + 1}}</td>
 	      <td><a href='{{Website}}'>{{name}}</a></td>
 	      <td>{{restaurant}}</td>
-	      <td> <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>  
-<span class="fa fa-star checked"></span>{{Rating}}</td>
+	      <td> {{Rating}}</td>
 <td><i class="material-icons">restaurant</i><a href='{{menu}}'>{{food}}</a></td> 
 	    </tr>
 	  {{/each}}
@@ -194,18 +218,24 @@
 
 <br>
 <hr>
+
+<!-- Side-by-Side Image Gallery-->
+
 <h3 align="center"> Top three restaurants </h3>
+
+<!--The <div> tag defines a division or a section in an HTML document-->
+
  <div class="row">
   <div class="column">
-    <img src="singapore.jpg" alt="Snow" style="width:100%" style="height:150px">
+    <img src="singapore.jpg" alt="singapore" style="width:100%" style="height:150px">
 	<div class="desc">Singapore Restaurant - Chinese, Asian</div>
   </div>
   <div class="column">
-   <img src="sugo.jpg" alt="Forest" style="width:100%" style="height:150px">
+   <img src="sugo.jpg" alt="sugo" style="width:100%" style="height:150px">
 	<div class="desc">Sugo - Italian, Mediterranean</div>
   </div>
   <div class="column">
-    <img src="askitalian.jpg" alt="Mountains" style="width:100%" style="height:150px">
+    <img src="askitalian.jpg" alt="ASKItalian" style="width:100%" style="height:150px">
 	<div class="desc">ASK Italian - Italian, pizza, Vegetarian friendly </div>
   </div>
 </div>
@@ -213,15 +243,15 @@
 <h3 align="center">  Top three Chinese Restaurants </h3>
  <div class="row">
   <div class="column">
-    <img src="chung.jpg" alt="Snow" style="width:100%" style="height:150px">
+    <img src="chung.jpg" alt="Chung" style="width:100%" style="height:150px">
 	<div class="desc">Chung Ying Garden </div>
   </div>
   <div class="column">
-   <img src="singapore.jpg" alt="Forest" style="width:100%" style="height:150px">
+   <img src="singapore.jpg" alt="Singapore" style="width:100%" style="height:150px">
 	<div class="desc">Singapore Restaurant </div>
   </div>
   <div class="column">
-    <img src="rubys.jpg" alt="Mountains" style="width:100%" style="height:150px">
+    <img src="rubys.jpg" alt="Rubys" style="width:100%" style="height:150px">
 	<div class="desc">Rubys </div>
   </div>
 </div>
@@ -230,15 +260,15 @@
 <h3 align="center">  Worcester Cheap Eats </h3>
  <div class="row">
   <div class="column">
-    <img src="black.jpg" alt="Snow" style="width:100%" style="height:150px">
+    <img src="black.jpg" alt="cafe" style="width:100%" style="height:150px">
 	<div class="desc">Black & Whit3 - Cafe, British</div>
   </div>
   <div class="column">
-   <img src="waylands.jpg" alt="Forest" style="width:100%" style="height:150px">
+   <img src="waylands.jpg" alt="waylands" style="width:100%" style="height:150px">
 	<div class="desc">Wayland's Yard - Cafe, British </div>
   </div>
   <div class="column">
-    <img src="traditional-breakfast.jpg" alt="Mountains" style="width:100%" style="height:150px">
+    <img src="traditional-breakfast.jpg" alt="foleys" style="width:100%" style="height:150px">
 	<div class="desc">Foleys Cafe - Wuick bites, Cafe </div>
   </div>
 </div>
